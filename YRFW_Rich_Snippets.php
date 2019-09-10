@@ -15,6 +15,7 @@ class YRFW_Rich_Snippets {
 		'extension_description' => 'This extension outputs rich snippet data in product pages',
 		'extension_version'     => '0.1',
 		'extension_author'      => 'Paul Glushak',
+		'extension_url'         => 'https://github.com/hxii/YRFW-Extensions',
 	];
 
 	public function register_extension() {
@@ -54,11 +55,10 @@ class YRFW_Rich_Snippets {
 			],
 			'aggregateRating' => [
 				'@type'       => 'AggregateRating',
-				'ratingValue' => $result->response->bottomline->average_score ?: 0,
-				'ratingCount' => $result->response->bottomline->total_reviews ?: 0,
+				'ratingValue' => $result->response->bottomline->average_score ?? 0,
+				'ratingCount' => $result->response->bottomline->total_reviews ?? 0,
 			],
 		];
-		var_export( $result );
 		return $data;
 	}
 

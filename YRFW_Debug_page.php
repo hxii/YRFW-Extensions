@@ -2,8 +2,7 @@
 
 class YRFW_Debug_Page {
 
-	public function __construct()
-	{
+	public function __construct() {
 		add_action( 'init', array( $this, 'get_debug_info' ) );
 	}
 
@@ -12,6 +11,7 @@ class YRFW_Debug_Page {
 		'extension_description' => 'This extension allows support to access basic debug information about the site using a hashed key',
 		'extension_version'     => '0.1',
 		'extension_author'      => 'Paul Glushak',
+		'extension_url'         => 'https://github.com/hxii/YRFW-Extensions',
 	];
 
 	public function register_extension() {

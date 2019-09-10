@@ -11,6 +11,7 @@ class YRFW_Dashboard_Test {
 		'extension_description' => 'Your Yotpo stats in a glance',
 		'extension_version'     => '0.1',
 		'extension_author'      => 'Paul Glushak',
+		'extension_url'         => 'https://github.com/hxii/YRFW-Extensions',
 	];
 
 	protected $css = '

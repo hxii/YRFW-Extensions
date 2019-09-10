@@ -20,6 +20,7 @@ class YRFW_Export_Products extends YRFW_CSV_Helper {
 		'extension_description' => 'This extension allows you to export your product catalog in a Yotpo-ready format',
 		'extension_version'     => '0.1',
 		'extension_author'      => 'Paul Glushak',
+		'extension_url'         => 'https://github.com/hxii/YRFW-Extensions',
 	];
 
 	public function register_extension() {

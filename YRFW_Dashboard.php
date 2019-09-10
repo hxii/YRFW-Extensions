@@ -1,6 +1,6 @@
 <?php
 
-class YRFW_Dashboard_Test {
+class YRFW_Dashboard {
 
 	protected $api;
 

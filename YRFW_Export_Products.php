@@ -65,11 +65,11 @@ class YRFW_Export_Products extends YRFW_CSV_Helper {
 				'Product Image URL'   => $product['image'],
 				'Product Price'       => $product['price'],
 				'Currency'            => YRFW_CURRENCY,
-				'Spec UPC'            => $product['specs']['upc'],
-				'Spec SKU'            => $product['specs']['external_sku'],
-				'Spec Brand'          => $product['specs']['brand'],
-				'Spec MPN'            => $product['specs']['mpn'],
-				'Spec ISBN'           => $product['specs']['isbn'],
+				'Spec UPC'            => $product['specs']['upc'] ?? '',
+				'Spec SKU'            => $product['specs']['external_sku'] ?? '',
+				'Spec Brand'          => $product['specs']['brand'] ?? '',
+				'Spec MPN'            => $product['specs']['mpn'] ?? '',
+				'Spec ISBN'           => $product['specs']['isbn'] ?? '',
 			];
 			$data[]          = $current_product;
 		}
@@ -92,7 +92,7 @@ class YRFW_Export_Products extends YRFW_CSV_Helper {
 
 	public function form() {
 		if ( isset( $_POST['export_products'] ) && wp_verify_nonce( $_POST['yotpo_product_export_form'], 'product_export' ) ) {
-			$this->export( $this->process_products(), $this->header_rows );
+			$this->export();
 			$export_file = parent::generate_csv();
 			if ( $export_file ) {
 				new YRFW_Messages( esc_html__( 'Product catalog successfully exported to', 'yrfw' ) . ' <a class="alert-link" href="' . YRFW_PLUGIN_URL . '/' . $export_file . '">' . $export_file . '</a>', 'success' );

@@ -7,6 +7,9 @@
 - YRFW Export Products - Export your product catalog in a Yotpo-import-ready format.
 - YRFW Rich Snippets - Outputs rich snippet markup on product pages.
 
+# Installing Extensions
+Just place the extension in the `/extensions` folder inside YRFW and you should be good to go!
+
 # Writing Extensions
 Extensions are fairly simple at this point and require a couple of things:
 1. Add the required methods and properties (below) to the class.

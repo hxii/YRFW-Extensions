@@ -6,6 +6,7 @@
 - YRFW Debug Page - Allows (securely) accessing basic debug information to yotpo support.
 - YRFW Export Products - Export your product catalog in a Yotpo-import-ready format.
 - YRFW Rich Snippets - Outputs rich snippet markup on product pages.
+- YRFW Site-level Rich Snippets - Use `[yrfw_site_rich_snippet]` shortcode to output site-level rich snippets. Optional `hide` argument to not display the text.
 
 # Installing Extensions
 Just place the extension in the `/extensions` folder inside YRFW and you should be good to go!
